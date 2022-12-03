@@ -27,7 +27,26 @@ export default function GraphqlService() {
       return resultPromise;
     },
     getPostByCategory: function (Category) {
+      const query = gql
+        `query MyQuery {
+          posts(where: {category: {categoryName: "${Category}"}}) {
+            coverImage {
+              url
+            }
+            slug
+            excerpt
+            updatedAt
+            title
+            id
+          }
+        }
+        
+          
+          `
+      const resultPromise = request(process.env.REACT_APP_HYGRAPH_API_ENDPOINT, query);
+      //return promise
 
+      return resultPromise;
     }
     ,
     getPost: function (PostID) {
@@ -53,10 +72,41 @@ export default function GraphqlService() {
       
       
       `
+     
 
       const resultPromise = request(process.env.REACT_APP_HYGRAPH_API_ENDPOINT, query);
       return resultPromise;
 
+    },
+    insertMessage:function(msg)
+    {
+      const query = gql`mutation { createMessage(data:{name:"${msg.firstName} ${msg.lastName}", email:"${msg.email}",message:"${msg.message}"} )
+      {
+        name
+        email
+        message
+      }}
+      `;
+
+      console.log(query)
+    
+      
+      const resultPromise = request(process.env.REACT_APP_HYGRAPH_API_ENDPOINT,query);
+      return resultPromise;
+      
+    },
+    getCategories:function(){
+      const query = gql
+      `query Assets {
+        categories {
+          id
+          categoryName
+        }
+      }
+      `
+      const resultPromise = request(process.env.REACT_APP_HYGRAPH_API_ENDPOINT,query);
+      return resultPromise;
     }
+
   }
 }

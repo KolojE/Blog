@@ -40,6 +40,20 @@ export default function PostContent({ post }) {
                                     {
                                         className: "max-h-[300px] lg:max-h-[500px] mt-10 mb-10 lg:justify-self-center"
                                     }
+                                },
+                                pre:
+                                {
+                                    props:
+                                    {
+                                        className: ""
+                                    }
+                                },
+                                code:
+                                {
+                                    props:
+                                    {
+                                        className: "block  m-2 bg-zinc-700 rounded-lg min-w-[80%] p-5 md:text-md text-sm font-bold"
+                                    }
                                 }
 
                             }

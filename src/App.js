@@ -6,10 +6,11 @@ import AboutMe from './Pages/AboutMe'
 
 function App() {
   return (
-  <div className='dark min-h-screen font-roboto dark:bg-zinc-900'>
+  <div className='dark block h-full font-roboto dark:bg-zinc-900'>
     <Router>
       <Routes>
          <Route path='/' element={<Home />}/>
+         <Route path="/posts/:cat" element={<Home/>}/>
          <Route exact path="/Post/:id"  element={<Post/>}/>
          <Route path="/About" element={<AboutMe/>}/>
       </Routes>

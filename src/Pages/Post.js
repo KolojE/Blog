@@ -21,7 +21,7 @@ export default function Post(props) {
 
     if (post) {
         return (
-            <div className="">
+            <div className="dark:bg-zinc-900 h-full">
                 <TabBar />
                 <PostOpening post={post} />
                 <PostContent post={post} />
