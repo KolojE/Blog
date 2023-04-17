@@ -15,13 +15,14 @@ export default function Post(props) {
     React.useEffect(() => {
         GraphqlService().getPost(params.id).then((data) => {
             setPost(data.post);
+            console.log(data)
 
         })
     }, [])
 
     if (post) {
         return (
-            <div className="dark:bg-zinc-900 h-full">
+            <div className="dark:bg-zinc-900">
                 <TabBar />
                 <PostOpening post={post} />
                 <PostContent post={post} />

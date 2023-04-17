@@ -10,7 +10,8 @@ export default function TabBar()
       GraphqlService().getCategories()
       .then(
       (res)=>
-      {console.log(res)
+      {
+        console.log(res)
         setCategories(res.categories);
       }
       )
@@ -25,10 +26,8 @@ export default function TabBar()
 
       const elements = categories.map((category)=>
       {
-        
-          
       return (
-      <Menu.Item key={category.id}>
+      <Menu.Item key={category.categoryName}>
               {({ active }) => (
                 <a
                   href={`/posts/${category.categoryName}`}

@@ -54,10 +54,7 @@ export default function GraphqlService() {
       query MyQuery {
         post(where: {id: "${PostID}"}) {
           id
-          content {
-            html
-            markdown
-          }
+          content 
           createdAt
           updatedAt
           title
@@ -95,16 +92,14 @@ export default function GraphqlService() {
       return resultPromise;
       
     },
-    getCategories:function(){
+    getCategories:async function(){
       const query = gql
-      `query Assets {
+      ` query MyQuery {
         categories {
-          id
           categoryName
         }
-      }
-      `
-      const resultPromise = request(process.env.REACT_APP_HYGRAPH_API_ENDPOINT,query);
+      } `
+      const resultPromise =await request(process.env.REACT_APP_HYGRAPH_API_ENDPOINT,query);
       return resultPromise;
     }
 
