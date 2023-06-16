@@ -29,7 +29,7 @@ export default function Content({ category }) {
     })
 
     return (
-        <div  className="">
+        <div  className="dark:bg-zinc-900">
             <div className="flex justify-center mt-10   ">
                 <span className=" text-3xl font-bold">{`Recent Posts`}</span>
             </div>

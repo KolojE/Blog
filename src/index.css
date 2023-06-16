@@ -14,7 +14,8 @@ body,#root,html {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow:scroll
+  overflow:scroll;
+  
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

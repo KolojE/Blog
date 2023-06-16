@@ -7,7 +7,7 @@ import { useParams } from "react-router";
 export default function Home() {
     const params = useParams()
     return (
-        <div className='dark:text-white h-full dark:bg-zinc-900' >
+        <div className='dark:text-white h-full bg-zinc-900' >
             <Title />
             <TabBar />
             <Posts category={params.cat}/>

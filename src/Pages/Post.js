@@ -9,6 +9,7 @@ import PostContent from "../Components/PostContent";
 
 export default function Post(props) {
     const params = useParams();
+    console.log(params)
     const [post, setPost] = React.useState()
 
     React.useEffect(() => {
