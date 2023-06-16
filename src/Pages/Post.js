@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 import GraphqlService from "../Services/GraphqlService"
 import TabBar from "../Components/TabBar";
 import PostOpening from "../Components/PostOpening";
@@ -9,7 +9,6 @@ import PostContent from "../Components/PostContent";
 
 export default function Post(props) {
     const params = useParams();
-
     const [post, setPost] = React.useState()
 
     React.useEffect(() => {

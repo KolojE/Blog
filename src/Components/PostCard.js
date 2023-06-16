@@ -22,7 +22,7 @@ export default function PostCard({ post }) {
                     {post.excerpt }
                 </span>
                 <div className="h-12"></div>
-                <a href={`/post/${post.id}`} onClick={readMore} className="absolute block bottom-2 right-2 dark:decoration-slate-400 underline transition hover:ease-in-out duration-200 text-xs lg:text-base">Read More..</a>
+                <a href={`/post?${post.id}`} onClick={readMore} className="absolute block bottom-2 right-2 dark:decoration-slate-400 underline transition hover:ease-in-out duration-200 text-xs lg:text-base">Read More..</a>
             </div>
         </div>
     )

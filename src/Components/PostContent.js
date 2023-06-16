@@ -12,7 +12,6 @@ export default function PostContent({ post }) {
         if (className && className.match(/lang-(\w+)/)) {
             lang = className.match(/lang-(\w+)/)
         }
-        console.log(androidstudio)
         return (
           <SyntaxHighlighter language={lang[1]} style={{...androidstudio}} customStyle={{padding:30}} className={"rounded-lg"} >
             {children}
